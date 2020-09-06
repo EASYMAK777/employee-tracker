@@ -84,3 +84,13 @@ function deleteEmployee() {
         }
     );
 }
+
+function ReadEmployee() {
+    console.log ("Selecting from employee roster...\n");
+    connection.query("SELECT*FROM employees", function(err, res){
+        if (err) throw err;
+
+        console.log(res);
+        connection.end();
+    })
+}
