@@ -28,17 +28,21 @@ CREATE TABLE company_role (
 
 
 INSERT INTO company_employee (first_name, last_name, employee_id, department_name)
-VALUES ("Jacob", "Seymore", 2, "Sales");
+VALUES ("Jank", "Seymore", 1, "Sales");
 
 
 INSERT INTO company_role (role_title,role_id)
-VALUES ("Sales Person", 2);
+VALUES ("Sales Person", 1);
 
 
 
-INSERT INTO department (department_id,department_name)
-VALUES (1, "Sales");
+INSERT INTO department (department_name, department_id)
+VALUES ("Sales", 1);
 
+SELECT*FROM department;
+SELECT*FROM company_role;
+SELECT*FROM company_employee;
 
-
-
+SELECT id, role_title, department_id
+FROM company_role
+INNER JOIN company_role ON employees.role_id = role.id;
