@@ -7,7 +7,7 @@ const inquirer = require("inquirer");
 var connection = mysql.createConnection({
     host: "localhost",
 
-    port: 9001,
+    port: 3306,
 
     user: "root",
 
