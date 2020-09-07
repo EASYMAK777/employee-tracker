@@ -1,6 +1,6 @@
--- Drops the database if it exists already--
+
 DROP DATABASE IF EXISTS employeeTracker_db;
---Creates the database--
+
 CREATE DATABASE employeeTracker_db;
 
 USE employeeTracker_db;
@@ -19,25 +19,38 @@ USE employeeTracker_db;
 --     PRIMARY KEY (id)
 -- );
 
+
+DROP DATABASE IF EXISTS employeeTracker_db;
+
+CREATE DATABASE employeeTracker_db;
+
+USE employeeTracker_db;
+
 CREATE TABLE company_employee (
-    id INT PRIMARY KEY NOT NULL,
+    id INT auto_increment PRIMARY KEY NOT NULL,
     first_name VARCHAR(30),
     last_name VARCHAR(30) NOT NULL,
     role_id INT,
-    manager_id INT,
+    manager_id INT
 );
 
 
----adding starting information--
 
-INSERT INTO company_employee(first_name, last_name, role_id, manager_id) VALUES ("Jacob", "Seymore", 3, 1);
 
-SELECT*FROM company_employee
+INSERT INTO company_employee (first_name, last_name, id, role_id, manager_id) 
+VALUES ("Jacob", "Seymore", 3, 1, 1);
 
-SELECT first_name,last_name, id
-FROM first_name,last_name,id
+SELECT*FROM company_employee;
 
-RIGHT JOIN authors ON books.authorId = authors.id;
-LEFT JOIN authors ON books.authorId = authors.id;
-INNER JOIN authors ON books.authorId = authors.id;
+
+
+
+
+
+-- SELECT (first_name,last_name, id)
+-- FROM (first_name,last_name,id)
+
+-- RIGHT JOIN authors ON books.authorId = authors.id;
+-- LEFT JOIN authors ON books.authorId = authors.id;
+-- INNER JOIN authors ON books.authorId = authors.id;
 
