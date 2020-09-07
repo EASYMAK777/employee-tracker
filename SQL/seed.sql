@@ -13,7 +13,7 @@ CREATE TABLE department_id (
 );
 
 CREATE TABLE company_role (
-    id INT PRIMARY KEY NOT NULL,
+    id INT NOT NULL,
     title VARCHAR(30),
     salary DECIMAL,
     PRIMARY KEY (id)
