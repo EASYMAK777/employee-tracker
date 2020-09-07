@@ -37,6 +37,7 @@ SELECT*FROM company_employee
 SELECT first_name,last_name, id
 FROM first_name,last_name,id
 
-
-
+RIGHT JOIN authors ON books.authorId = authors.id;
+LEFT JOIN authors ON books.authorId = authors.id;
+INNER JOIN authors ON books.authorId = authors.id;
 
