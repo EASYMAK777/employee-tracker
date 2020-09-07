@@ -1,4 +1,5 @@
-const mysql = require("mysql")
+const mysql = require("mysql");
+const inquirer = require("inquirer");
 // const inquirer = require("inquirer")
 // const consoletable = require("console.table");
 // const fs = require("fs");
@@ -6,11 +7,11 @@ const mysql = require("mysql")
 var connection = mysql.createConnection({
     host: "localhost",
 
-    port: 8707,
+    port: 9001,
 
-    user: "EASYMAK777",
+    user: "root",
 
-    password: "Starwood7",
+    password: "Starwood7!",
     database: "employeeTracker_db"
 
 });
@@ -18,79 +19,116 @@ var connection = mysql.createConnection({
 connection.connect(function (err) {
     if (err) throw err;
     console.log("connected as id" + connection.threadId);
-    connection.end();
+    makeConnection();
 });
 
-// function addEmployee() {
-//     console.log("Adding new Employee....\n");
-//     var query = connection.query(
-//         "INSERT INTO employee SET ?",
-//         {
-//             first_name: "Juan Flores",
-//             last_name: "Flores",
-//             role: "Owner",
-//             role_id: 1,
-//             manager_id: ""
-//         },
-//         function (err, res) {
-//             if (err) throw err;
-//             console.log(res.affectedRows + "New employee insterted!\n");
-//             updateEmployee();
-//         }
-//     );
+const menu = [
+    {
+        name: "Main Menu",
+        type: "list",
+        message: "What would you like to do?",
+        choices: ["View All Employees",
+            "View all employee by department",
+            "View All Employees by Role",
+            "Add Employee",
+            "Add Role",
+            "Add Department",
+            "Update Employee Role",
+            "Exit"],
+    }
+];
+
+function makeConnection() {
+    inquirer.prompt(menu).then(function (userChoice){
+        console.log(userChoice.main);
+        var choices = userChoice.main;
+    })
+}
 
 
-//     console.log(query.sql);
-// }
 
 
-// function updateEmployee() {
-//     console.log("Updating employee roster...\n");
-//     var query = connecton.query(
-//         "UPDATE employee SET ? WHERE ?",
-//         [
-//             {
-//                 quantity: 1
-//             },
-            
-//         ],
-//         function(err, res) {
-//             if(err) throw err;
-//             console.log(res.affectedRows + "Employee roster updated!\n");
-//             deleteEmployee();
-//         }
-//     );
-    
-//     console.log(query.sql);
-// }
 
-// function deleteEmployee() {
-//     console.log("Deleting outdated employee file...\n");
-//     connection.query(
-//         "DELETE FROM employee roster WHERE ?",
-//         {
-//             first_name: "",
-//             last_name: "",
-//             role: "Owner",
-//             role_id: "",
-//             manager_id: ""
 
-//         },
-//         function (err, res) {
-//             if (err) throw err;
-//             console.log(res.affectedRows + "Employee deleted!\n");
 
-//             ReadEmployee();
-//         }
-//     );
-// }
 
-// function ReadEmployee() {
-//     console.log ("Selecting from employee roster...\n");
-//     connection.query("SELECT*FROM employees", function(err, res){
-//         if (err) throw err;
 
-//         console.log(res);
-//         connection.end();
-//     })
-// }
+
+
+
+
+
+
+function addEmployee() {
+    console.log("Adding new Employee....\n");
+    var query = connection.query(
+        "INSERT INTO employee SET ?",
+        {
+            first_name: "Juan Flores",
+            last_name: "Flores",
+            role: "Owner",
+            role_id: 1,
+            manager_id: ""
+        },
+        function (err, res) {
+            if (err) throw err;
+            console.log(res.affectedRows + "New employee insterted!\n");
+            updateEmployee();
+        }
+    );
+
+
+    console.log(query.sql);
+}
+
+
+function updateEmployee() {
+    console.log("Updating employee roster...\n");
+    var query = connecton.query(
+        "UPDATE employee SET ? WHERE ?",
+        [
+            {
+                quantity: 1
+            },
+
+        ],
+        function(err, res) {
+            if(err) throw err;
+            console.log(res.affectedRows + "Employee roster updated!\n");
+            deleteEmployee();
+        }
+    );
+
+    console.log(query.sql);
+}
+
+function deleteEmployee() {
+    console.log("Deleting outdated employee file...\n");
+    connection.query(
+        "DELETE FROM employee roster WHERE ?",
+        {
+            first_name: "",
+            last_name: "",
+            role: "Owner",
+            role_id: "",
+            manager_id: ""
+
+        },
+        function (err, res) {
+            if (err) throw err;
+            console.log(res.affectedRows + "Employee deleted!\n");
+
+            ReadEmployee();
+        }
+    );
+}
+
+function ReadEmployee() {
+    console.log ("Selecting from employee roster...\n");
+    connection.query("SELECT*FROM employees", function(err, res){
+        if (err) throw err;
+
+        console.log(res);
+        connection.end();
+    })
+}

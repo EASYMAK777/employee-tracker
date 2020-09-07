@@ -28,9 +28,9 @@ CREATE TABLE company_role (
 
 
 INSERT INTO company_employee (first_name, last_name, employee_id, department_name, role_title, role_id, is_currently_employeed,  department_id),
-VALUES ("Jacob", "Seymore", 2, "Sales", "Sales Person", 2, 3, true, 1)
-VALUES ("Serena", "Balthashar", 3, "Engineering", "Engineer", 9, 4, true, 2)
-VALUES ("Jordan", "Maxwell", 4, "Finance", "Accountant", 3, 4, true, 2)
+VALUES ("Jacob", "Seymore", 2, "Sales", "Sales Person", 2, true, 1)
+VALUES ("Serena", "Balthashar", 3, "Engineering", "Engineer", 9,  true, 2)
+VALUES ("Jordan", "Maxwell", 4, "Finance", "Accountant", 3, true, 2)
 
 
 INSERT INTO company_role (role_title,role_id),
@@ -53,12 +53,6 @@ VALUES (7,"")
 VALUES (8,"")
 VALUES (9,"")
 VALUES (10,"")
-
-SELECT
-FROM
-INNER JOIN
-ON
-
 
 
 
