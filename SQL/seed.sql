@@ -10,7 +10,7 @@ CREATE TABLE company_employee (
     last_name VARCHAR(30) NOT NULL,
     role_id INT,
     manager_id INT,
-    is_currently_employeed BOOLEAN NOT NULL
+    is_currently_employeed BOOLEAN NOT NULL DEFAULT true
 );
 
 
