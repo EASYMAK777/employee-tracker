@@ -3,11 +3,11 @@
 ![(https://img.shields.io/badge/licence-readme-red)]
 
 
- [employee-tracker.gif] (./assets/img/gif.gif);
+ [employee-tracker.gif] (./img/employee.gif);
     
-[readme-generator-demo-gif](./assets/img/gif.gif);
 
-![(https://img.shields.io/badge/licence-readme-red)]
+
+
     
     #Title
      
@@ -34,11 +34,11 @@
 
   ## Installation
   
-  open terminal in file, type node index.js and press enter.  Follow prompts and viola!! A brand new read me doc is generated
+  npm install.  to install dependancies
 
   ## Usage
 
-  I want it to be used for developers in order to generate a readme and save time
+  I want it to be used for companies to keep track of employees and other search parameters
 
   ##License
 
@@ -48,9 +48,9 @@
   Juan Flores
 
   ## Tests
-  first you must npm i and dependancies will download into the file.  Once you have installed dependancies you just type in node index.js in the built in terminal.  Fill in the information asked and viola a readme is generated
+  first you must npm i and dependancies will download into the file.  Once you have installed dependancies you just type in node tracker.js in the built in terminal.  
 
   ## Questions
 
-  Contact me if you have questions at [GitHub](hittp:github.com/undefined) Or, email me at undefined.
+  Contact me if you have questions at [GitHub](hittp:github.com/easymak777) Or, email me at jplocallawncare@gmail.com
     
