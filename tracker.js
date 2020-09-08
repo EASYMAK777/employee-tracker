@@ -40,11 +40,19 @@ const menu = [
             "Exit"],
         }
     ];
+
+
+
     
     function makeConnection() {
         inquirer.prompt(menu).then(function (userChoice){
-            console.log(userChoice.main);
-            ReadEmployee();
+            console.table(userChoice.main);
+
+
+            if (choice === "View All Employees") {
+                ReadEmployee();
+            }
+            
             
         })
     }
@@ -55,16 +63,28 @@ const menu = [
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
     function ReadEmployee() {
-        console.log ("Selecting from employee roster...\n");
+        // console.log ("Selecting from employee roster...\n");
+        console.log("Viewing Roster!");
         connection.query("SELECT*FROM company_employee", function(err, res){
             if (err) throw err;
     
             console.table(res);
             makeConnection();
+            
         })
     }
 
+    ReadEmployee();
 
 
 
