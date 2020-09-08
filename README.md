@@ -1,19 +1,21 @@
-# employee-tracker![(https://img.shields.io/badge/licence-readme-red)]
+# employee-tracker
+
+![(https://img.shields.io/badge/licence-readme-red)]
     
-    ##Title
+    #Title
      
-    Employee tracker CLI
+    Employee managment system
 
-    ## Description
+    # Description
 
-    Simple Employee tracking application using SQL, and Node.
+    used to track employees
 
     
-    ![SQL CLI App gif](./assets/img/gif.gif);
+
     
     
     
-    ## Table of Contents
+    # Table of Contents
     * [installation](#installation)
     * [usage](#usage)
     * [license](#license)
@@ -23,25 +25,24 @@
     
     
 
-    ## Installation
+    # Installation
   
     undefined
 
-    ## Usage
+    # Usage
 
-    to keep track and be able to update multiple employee trackers
+    to be used to keep track of employees, roles, and salaries
 
-    ##License
+    #License
 
     ![github License](https://img.shields.io/badge/licence--red.svg)
 
-    ## Contributing memebers
+    # Contributing memebers
     undefined
 
-    ## Tests
-    just install all dependancies, and in command prompt enter node tracker.js.  Press enter and all app will commence.
+    # Tests
+    in command line type node tracker.js
 
-    ## Questsions
+    # Questsions
 
-    Contact me if you have questions at [GitHub](hittp:github.com/undefined] Or, email me at undefined)
-
+    Contact me if you have questions at [GitHub](hittp:github.com/ueasymak777] Or, email me at jplocallawncare@gmail.com)
