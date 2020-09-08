@@ -10,8 +10,7 @@ CREATE TABLE company_employee (
     first_name VARCHAR(30),
     last_name VARCHAR(30) NOT NULL,
     role_id INT,
-    role_name VARCHAR(30),
-   is_currently_employeed BOOLEAN NOT NULL default true
+    role_title VARCHAR(30)
 );
 
 CREATE TABLE department (
@@ -22,27 +21,45 @@ CREATE TABLE department (
 CREATE TABLE company_role (
     role_id INT PRIMARY KEY,
     role_title VARCHAR(30),
-    employee_salary DECIMAL,
     department_id INT
 );
 
 
-INSERT INTO company_employee (first_name, last_name, employee_id, department_name)
-VALUES ("Jank", "Seymore", 1, "Sales");
+
+INSERT INTO company_employee (first_name, last_name, employee_id)
+VALUES ("Jank", "Seymore", 1),
+("Norma", "Cornroy", 2),
+("Johnny", "Bubkiss", 3),
+("Barack", "Obama", 4),
+("Donald", "Trump", 5);
 
 
-INSERT INTO company_role (role_title,role_id)
-VALUES ("Sales Person", 1);
 
 
 
-INSERT INTO department (department_name, department_id)
-VALUES ("Sales", 1);
+INSERT INTO company_role (role_title, role_id, department_id)
+VALUES ("Sales Person", 10, 100),
+("Engineer", 11, 110),
+("Accountant", 12, 120),
+("Media Specialist", 13, 130),
+("Property Retail", 14, 140);
 
-SELECT*FROM department;
-SELECT*FROM company_role;
-SELECT*FROM company_employee;
 
-SELECT id, role_title, department_id
-FROM company_role
-INNER JOIN company_role ON employees.role_id = role.id;
+
+INSERT INTO department (department_name)
+VALUES ("Sales"),
+("Engineering"),
+("Finance"),
+("Public Relations"),
+("Acquisitions");
+
+
+
+
+
+ SELECT*FROM department;
+ SELECT*FROM company_role;
+ SELECT*FROM company_employee;
+
+SHOW FULL TABLES
+WHERE company_employee = "VIEW";
