@@ -3,7 +3,7 @@
 ![(https://img.shields.io/badge/licence-readme-red)]
 
 
- [employee-tracker.gif] (./img/employee.gif);
+ [employee-tracker.gif] (./assets/img/employee.gif);
     
 
 
